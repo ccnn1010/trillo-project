@@ -1,0 +1,30 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;//this centers the container inside its parent element which is the body in this case
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+}
+
+.content {
+    display: flex;
+}
+
+.header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--color-grey-dark-2);
+}
+
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;//1st value is grow, 2nd is shrink, flex basis is third.  In this case no grow of shrink just fit at 18%
+}
+
+.hotel-view {
+    background-color: #fff;
+    background-color: orangered;
+
+    flex: 1;// if you do flex 1 it grows to all the availble space it has
+}
