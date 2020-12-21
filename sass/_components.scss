@@ -156,13 +156,23 @@
         width: 3px;
         background-color: var(--color-primary);
         transform: scaleY(0);
-        transition: transform 1s;
+        transition: transform .2s, 
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .1s;//second value for the width is the delay (.2s)
+                    //cubic-bezier is a timing function
     }
 
-    &__items:hover::before {
+
+   /*  cubic bezier.com shows you the speed of the transition */
+    &__items:hover::before,
+    &__items--active::before {
         transform: scaleY(1);//starts in the center then grows in the y direction
+        width: 100%;
     }
 
+    &__item:active::before {
+        background-color: var(--color-primary-light);
+    }
 
     &__link:link,
     &__link:visited {
@@ -171,6 +181,8 @@
         text-transform: uppercase;
         display: block;
         padding: 1.5rem 3rem; //top/bottom left/right
+        position: relative;//z-index only works with a specified position
+        z-index: 10;//places text over the animation needs any number that is higher than 0
 
 
         display: flex;
