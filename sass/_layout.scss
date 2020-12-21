@@ -25,11 +25,18 @@
 .sidebar {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%;//1st value is grow, 2nd is shrink, flex basis is third.  In this case no grow of shrink just fit at 18%
+
+    display: flex;
+    flex-direction: column;//changes direction to top to bottom
+    justify-content: space-between;//this pushes the legal space to the bottom as there are only 2 elements so one is pushed to the top and the other is pushed to the bottom.
 }
 
 .hotel-view {
     background-color: #fff;
+
+    //TEST
     background-color: orangered;
+    height: 80rem;
 
     flex: 1;// if you do flex 1 it grows to all the availble space it has
 }

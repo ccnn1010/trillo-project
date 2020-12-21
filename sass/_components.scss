@@ -127,3 +127,78 @@
 
     
 }
+
+
+
+/////////////////////////////////////////////
+//SIDE NAVIGATION
+
+.side-nav {
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+
+    &__items {
+      position: relative;
+
+
+       &:not(:last-child) {
+          margin-bottom: .5rem;
+      } //add a margin on all the items accept the last one
+    }
+
+    &__items::before {
+        content: "";//needed to show in the browser
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform 1s;
+    }
+
+    &__items:hover::before {
+        transform: scaleY(1);//starts in the center then grows in the y direction
+    }
+
+
+    &__link:link,
+    &__link:visited {
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 3rem; //top/bottom left/right
+
+
+        display: flex;
+        align-items: center;
+
+    }
+
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;//color of parent element
+
+    }
+
+
+}
+
+
+
+
+////////////////////////////////////////////////
+//LEGAL
+
+.legal {
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
+}
