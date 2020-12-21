@@ -12,9 +12,14 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-dark-2);
+
+    display: flex;
+    justify-content: space-between;//creates even space between the three elements in the nav
+    align-items: center;//centers the elements
 }
 
 .sidebar {
