@@ -15,7 +15,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-dark-2);
+    border-bottom: var(--line);
 
     display: flex;
     justify-content: space-between;//creates even space between the three elements in the nav
@@ -34,9 +34,30 @@
 .hotel-view {
     background-color: #fff;
 
-    //TEST
-    /* background-color: orangered; */
-    height: 80rem;
-
     flex: 1;// if you do flex 1 it grows to all the availble space it has
+}
+
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+
+.description {
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%; /* 0 grow and 0 shrink */
+    margin-right: 4.5rem;
+}
+
+
+.user-reviews {
+    background-color: yellowgreen;
+    flex: 1;//covers remaining space
+
 }
