@@ -341,3 +341,27 @@
         box-shadow: none;
     }
 }
+
+////////////////////////////////////////////////
+//PARAGRAPH
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+////////////////////////////////////////////////
+//LIST
+
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;//this allows the content to align
+}
+
+////////////////////////////////////////////////
+//RECOMMEND
