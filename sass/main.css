@@ -127,7 +127,6 @@ body {
 }
 
 .description {
-  font-size: 1.4rem;
   background-color: #fff;
   -webkit-box-shadow: var(--shadow-light);
           box-shadow: var(--shadow-light);
@@ -143,10 +142,16 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  /* 
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logo {
@@ -446,7 +451,7 @@ body {
   color: var(--color-primary);
   font-size: inherit;
   border-bottom: 1px solid currentColor;
-  padding: 2px;
+  padding-bottom: 2px;
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
@@ -454,8 +459,18 @@ body {
   transition: all .2s;
 }
 
+.btn-inline span {
+  margin-left: 3px;
+  -webkit-transition: margin-left .2s;
+  transition: margin-left .2s;
+}
+
 .btn-inline:hover {
   color: var(--color-grey-dark-1);
+}
+
+.btn-inline:hover span {
+  margin-left: 8px;
 }
 
 .btn-inline:focus {
@@ -466,8 +481,8 @@ body {
 
 @-webkit-keyframes pulsate {
   0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -478,8 +493,8 @@ body {
             box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -487,8 +502,8 @@ body {
 
 @keyframes pulsate {
   0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -499,8 +514,8 @@ body {
             box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
   }
   100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     -webkit-box-shadow: none;
             box-shadow: none;
   }

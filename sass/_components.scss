@@ -298,36 +298,41 @@
 
 }
 
-
-
-////////////////////////////////////////////////
-//BUTTON INLINE
+////////////////////////////////////////
+// BUTTON INLINE
 .btn-inline {
     border: none;
     color: var(--color-primary);
     font-size: inherit;
     border-bottom: 1px solid currentColor;
-    padding: 2px;
+    padding-bottom: 2px;
     display: inline-block;
     background-color: transparent;
     cursor: pointer;
     transition: all .2s;
 
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
 
     &:hover {
         color: var(--color-grey-dark-1);
+
+        span {
+            margin-left: 8px;
+        }
     }
 
     &:focus {
         outline: none;
         animation: pulsate 1s infinite;
     }
-
 }
 
 @keyframes pulsate {
     0% {
-        transform: scaleY(1);
+        transform: scale(1);
         box-shadow: none;
     }
 
@@ -337,10 +342,13 @@
     }
 
     100% {
-        transform: scaleY(1);
+        transform: scale(1);
         box-shadow: none;
     }
 }
+
+
+
 
 ////////////////////////////////////////////////
 //PARAGRAPH
@@ -429,13 +437,13 @@
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
-    position: relative;
-    overflow: hidden;
+    position: relative;//parent position
+    overflow: hidden;//fixes overflow of the quotation marks
     
         &__text {
             margin-bottom: 2rem;
             z-index: 10;
-            position: relative;
+            position: relative;//a position must be set for z-index to work
         }
     
         &__user {
@@ -451,12 +459,12 @@
         }
     
         &__user-box {
-            margin-right: auto;
+            margin-right: auto;//pushes text to right side
         }
     
         &__user-name {
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 600;//makes it bold
             text-transform: uppercase;
             margin-bottom: .4rem;
         }
@@ -472,16 +480,17 @@
             font-weight: 300;
         }
     
+        //question mark for qoute
         &::before {
-            content: "\201C";
-            position: absolute;
+            content: "\201C";// /201C is the code from HTML Entities for a qoutation mark
+            position: absolute;//child position
             top: -2.75rem;
             left: -1rem;
             line-height: 1;
             font-size: 20rem;
             color: var(--color-grey-light-2);
-            font-family: sans-serif;
-            z-index: 1;
+            font-family: sans-serif;//this changes the shape of the qoutaions marks as they originlly inherit a serif font
+            z-index: 1;//ensures the element stays with in the container
         }
     }
 
