@@ -17,6 +17,14 @@
     align-items: center;//centers elements along the cross axis this is usually the y axis
     justify-content: center;//centers elements along the main axis
 
+    
+
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -206,6 +214,11 @@
           padding: 2rem;
         }
 
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;//this changes the small screen sizes from row to column
+            padding: 1.5rem .5rem;
+          }
+
     }
 
 
@@ -214,6 +227,14 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;//color of parent element
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0;
+            margin-bottom: .7rem;//7px
+          }
 
     }
 
@@ -268,6 +289,12 @@
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
 
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+          }
+
     }
 
     &__stars {
@@ -306,16 +333,28 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+          }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+          }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: .5rem;
+          }
     }
 
 }

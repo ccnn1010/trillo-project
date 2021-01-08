@@ -38,12 +38,14 @@ Grey dark 3: #999
 //custom css is effective when using javascript 
 
 
-//breakpoints
+//breakpoints bp
 
 //You need sass variables for media queries as custom css doesn't work
 $bp-largest: 75em; // 1200px  just divide by 16
 $bp-large: 68.75em;   //1100px
 $bp-medium: 56.25em;   //900px
+$bp-small: 37.5em;   //600px
+$bp-smallest: 31.25em;   //500px
 
 //universal reset margin and paddings
 * {
